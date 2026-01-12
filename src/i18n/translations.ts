@@ -1,0 +1,118 @@
+export const translations = {
+    en: {
+        state01: {
+            line1: "Format: Automated logic management.",
+            line2: "Status: Active.",
+        },
+        state02: {
+            line1: "Execution is no longer scarce.",
+            line2: "Coordination is.",
+            line3: "When execution becomes cheap,",
+            line4: "structures built to manage human labor",
+            line5: "invert from efficiency mechanisms",
+            line6: "into sources of drag.",
+        },
+        state03: {
+            line1: "Power no longer scales with headcount.",
+            line2: "It scales with architecture.",
+            line3: "What once required coordination",
+            line4: "now requires structure.",
+        },
+        state04: {
+            line1: "The firm does not fail because it is poorly managed.",
+            line2: "It fails because its logic no longer matches the cost structure of execution.",
+            line3: "Adding processes does not restore efficiency. Adding management does not restore control.",
+            line4: "The system drifts because it was built for a scarcity that no longer exists.",
+        },
+        state05: {
+            line1: "A different unit replaces the firm.",
+            line2: "Not a smaller organization.",
+            line3: "Not a better-managed one.", // Note: In original code "Not a better-managed one." was separate line in block.
+            line4: "A configuration that operates globally",
+            line5: "without proportional human structure.",
+            line6: "Costs approach zero",
+            line7: "when it is not producing value.",
+        },
+        state06: {
+            line1: "When execution is automated,",
+            line2: "advantage no longer comes from doing more.",
+            line3: "It comes from deciding what persists,",
+            line4: "what adapts,",
+            line5: "and what is constrained.",
+            line6: "Governance replaces production",
+            line7: "as the primary scarcity.",
+        },
+        state07: {
+            line1: "This shift does not distribute power.",
+            line2: "It concentrates it.",
+            line3: "Productive capacity detaches",
+            line4: "from institutions,",
+            line5: "from geography,",
+            line6: "and from labor.",
+            line7: "What remains is control",
+            line8: "over systems that no longer need permission.",
+        },
+        state08: {
+            title: "Power After the Firm",
+        },
+        footer: "Cyboring Technologies LLC, Delaware, USA",
+    },
+    es: {
+        state01: {
+            line1: "Formato: gestión lógica automatizada.",
+            line2: "Estado: Activo.",
+        },
+        state02: {
+            line1: "La ejecución ya no es escasa.",
+            line2: "La coordinación sí.",
+            line3: "Cuando la ejecución se vuelve barata,",
+            line4: "las estructuras creadas para gestionar trabajo humano",
+            line5: "se invierten de mecanismos de eficiencia",
+            line6: "en fuentes de fricción.",
+        },
+        state03: {
+            line1: "El poder ya no escala con el número de personas.",
+            line2: "Escala con la arquitectura.",
+            line3: "Lo que antes requería coordinación",
+            line4: "ahora requiere estructura.",
+        },
+        state04: {
+            line1: "La firma no fracasa por estar mal gestionada.",
+            line2: "Fracasa porque su lógica ya no coincide con la estructura de costos de la ejecución.", // Mapping logical blocks
+            line3: "Agregar procesos no restaura eficiencia. Agregar gestión no restaura control.",
+            line4: "El sistema deriva porque fue construido para una escasez que ya no existe.",
+        },
+        state05: {
+            line1: "Una unidad distinta reemplaza a la firma.",
+            line2: "No una organización más pequeña.",
+            line3: "No una mejor gestionada.",
+            line4: "Una configuración que opera globalmente",
+            line5: "sin una estructura humana proporcional.",
+            line6: "Los costos se aproximan a cero",
+            line7: "cuando no está produciendo valor.",
+        },
+        state06: {
+            line1: "Cuando la ejecución se automatiza,",
+            line2: "la ventaja ya no proviene de hacer más.",
+            line3: "Proviene de decidir qué persiste,",
+            line4: "qué se adapta,",
+            line5: "y qué se restringe.",
+            line6: "La gobernanza reemplaza a la producción",
+            line7: "como la escasez primaria.",
+        },
+        state07: {
+            line1: "Este cambio no distribuye poder.",
+            line2: "Lo concentra.",
+            line3: "La capacidad productiva se desacopla",
+            line4: "de las instituciones,",
+            line5: "de la geografía,",
+            line6: "y del trabajo.",
+            line7: "Lo que permanece es el control",
+            line8: "sobre sistemas que ya no requieren permiso.",
+        },
+        state08: {
+            title: "Power After the Firm", // Title remains in English
+        },
+        footer: "Cyboring Technologies LLC, Delaware, USA",
+    },
+};
