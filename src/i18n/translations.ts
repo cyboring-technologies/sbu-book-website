@@ -54,6 +54,7 @@ export const translations = {
         },
         state08: {
             title: "Power After the Firm",
+            url: "https://www.amazon.com/dp/B0GHR65YW8",
         },
         footer: "Cyboring Technologies LLC, Delaware, USA",
     },
@@ -112,6 +113,7 @@ export const translations = {
         },
         state08: {
             title: "Power After the Firm", // Title remains in English
+            url: "https://www.amazon.com/dp/B0GHS59BHX",
         },
         footer: "Cyboring Technologies LLC, Delaware, USA",
     },

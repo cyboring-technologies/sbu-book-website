@@ -1,12 +1,16 @@
 ---
-import SystemLayout from '../layouts/SystemLayout.astro';
-import { translations } from '../i18n/translations';
+import SystemLayout from "../layouts/SystemLayout.astro";
+import { translations } from "../i18n/translations";
 
 // Edge-based locale detection
-const acceptLanguage = Astro.request.headers.get('accept-language') || 'en';
+const acceptLanguage = Astro.request.headers.get("accept-language") || "en";
 // Check if Spanish is the preferred language (first in the list)
-const isSpanish = acceptLanguage.split(',')[0].trim().toLowerCase().startsWith('es');
-const lang = isSpanish ? 'es' : 'en';
+const isSpanish = acceptLanguage
+    .split(",")[0]
+    .trim()
+    .toLowerCase()
+    .startsWith("es");
+const lang = isSpanish ? "es" : "en";
 const t = translations[lang];
 ---
 
@@ -17,7 +21,6 @@ const t = translations[lang];
         Properties: Emptiness, Indifference, No Agency
     -->
     <main class="relative w-full bg-black font-mono subpixel-antialiased">
-        
         <!-- 
             [STATE 01] SYSTEM STATE
             Constraint: h-screen (Exact screen height) 
@@ -28,7 +31,9 @@ const t = translations[lang];
                 Positioning: Bottom Left (Peripheral)
                 Role: Status Indicator
             -->
-            <div class="absolute bottom-12 left-12 flex flex-col gap-2 text-[10px] md:text-xs tracking-[0.2em] text-neutral-500 leading-relaxed uppercase">
+            <div
+                class="absolute bottom-12 left-12 flex flex-col gap-2 text-[10px] md:text-xs tracking-[0.2em] text-neutral-500 leading-relaxed uppercase"
+            >
                 <span class="block">{t.state01.line1}</span>
                 <span class="block">{t.state01.line2}</span>
             </div>
@@ -40,15 +45,17 @@ const t = translations[lang];
             Properties: High density, No visual relief
         -->
         <section class="relative min-h-[120vh] w-full flex items-center">
-            <div class="ml-[15vw] max-w-[320px] text-xs text-neutral-400 leading-none tracking-tight">
+            <div
+                class="ml-[15vw] max-w-[320px] text-xs text-neutral-400 leading-none tracking-tight"
+            >
                 <p class="mb-4">
-                    {t.state02.line1}<br>
+                    {t.state02.line1}<br />
                     {t.state02.line2}
                 </p>
                 <p>
-                    {t.state02.line3}<br>
-                    {t.state02.line4}<br>
-                    {t.state02.line5}<br>
+                    {t.state02.line3}<br />
+                    {t.state02.line4}<br />
+                    {t.state02.line5}<br />
                     {t.state02.line6}
                 </p>
             </div>
@@ -64,11 +71,13 @@ const t = translations[lang];
             </div>
 
             <div class="absolute top-[82%] left-[40%] w-[260px]">
-                {t.state03.line3}<br>
+                {t.state03.line3}<br />
                 {t.state03.line4}
             </div>
         </section>
-        <section class="relative min-h-[130vh] w-full flex flex-col justify-center pl-[25vw] text-neutral-400 text-xs leading-none">
+        <section
+            class="relative min-h-[130vh] w-full flex flex-col justify-center pl-[25vw] text-neutral-400 text-xs leading-none"
+        >
             <div class="max-w-[420px] flex flex-col">
                 <p>{t.state04.line1}</p>
                 <p>{t.state04.line2}</p>
@@ -78,87 +87,95 @@ const t = translations[lang];
         </section>
 
         <section class="relative min-h-[120vh] w-full flex items-center">
-            <div class="ml-[35vw] max-w-[500px] text-xs text-neutral-400 leading-tight">
+            <div
+                class="ml-[35vw] max-w-[500px] text-xs text-neutral-400 leading-tight"
+            >
                 <p class="mb-1">{t.state05.line1}</p>
-                <p class="mb-1">{t.state05.line2}<br>{t.state05.line3}</p>
-                <p class="mb-1">{t.state05.line4}<br>{t.state05.line5}</p>
-                <p>{t.state05.line6}<br>{t.state05.line7}</p>
+                <p class="mb-1">{t.state05.line2}<br />{t.state05.line3}</p>
+                <p class="mb-1">{t.state05.line4}<br />{t.state05.line5}</p>
+                <p>{t.state05.line6}<br />{t.state05.line7}</p>
             </div>
         </section>
 
-
-    
-    <!-- 
+        <!-- 
         [STATE 06] GOVERNANCE SCARCITY 
         Constraint: min-h-[140vh] (Long, sustained)
         Properties: Decision Scarcity, No Relief
     -->
-    <section class="relative min-h-[140vh] w-full flex items-center">
-        <!-- 
+        <section class="relative min-h-[140vh] w-full flex items-center">
+            <!-- 
             Position: Off-center (ml-[20vw])
             Width: Narrow-medium
             Spacing: Compact (mb-4)
         -->
-        <div class="ml-[20vw] max-w-[450px] text-xs text-neutral-400 leading-tight">
-            <p class="mb-4">
-                {t.state06.line1}<br>
-                {t.state06.line2}
-            </p>
-            <p class="mb-4">
-                {t.state06.line3}<br>
-                {t.state06.line4}<br>
-                {t.state06.line5}
-            </p>
-            <p>
-                {t.state06.line6}<br>
-                {t.state06.line7}
-            </p>
-        </div>
-    </section>
+            <div
+                class="ml-[20vw] max-w-[450px] text-xs text-neutral-400 leading-tight"
+            >
+                <p class="mb-4">
+                    {t.state06.line1}<br />
+                    {t.state06.line2}
+                </p>
+                <p class="mb-4">
+                    {t.state06.line3}<br />
+                    {t.state06.line4}<br />
+                    {t.state06.line5}
+                </p>
+                <p>
+                    {t.state06.line6}<br />
+                    {t.state06.line7}
+                </p>
+            </div>
+        </section>
 
-    <!-- 
+        <!-- 
         [STATE 07] SYSTEMIC CONSEQUENCES
     -->
-    <section class="relative min-h-[125vh] w-full flex items-center">
-        <div class="ml-[25vw] max-w-[500px] text-xs text-neutral-400 leading-relaxed">
-            <p class="mb-6">
-                {t.state07.line1}
-            </p>
-            <p class="mb-6">
-                {t.state07.line2}
-            </p>
-            <p class="mb-6">
-                {t.state07.line3}<br>
-                {t.state07.line4}<br>
-                {t.state07.line5}<br>
-                {t.state07.line6}
-            </p>
-            <p>
-                {t.state07.line7}<br>
-                {t.state07.line8}
-            </p>
-        </div>
-    </section>
+        <section class="relative min-h-[125vh] w-full flex items-center">
+            <div
+                class="ml-[25vw] max-w-[500px] text-xs text-neutral-400 leading-relaxed"
+            >
+                <p class="mb-6">
+                    {t.state07.line1}
+                </p>
+                <p class="mb-6">
+                    {t.state07.line2}
+                </p>
+                <p class="mb-6">
+                    {t.state07.line3}<br />
+                    {t.state07.line4}<br />
+                    {t.state07.line5}<br />
+                    {t.state07.line6}
+                </p>
+                <p>
+                    {t.state07.line7}<br />
+                    {t.state07.line8}
+                </p>
+            </div>
+        </section>
 
-    <!-- 
+        <!-- 
         [STATE 08] ACTION (ACQUISITION)
         Constraint: min-h-[85vh] (Shorter than previous)
         Properties: Logical Resolution, Non-Urgent
     -->
-    <section class="relative min-h-[85vh] w-full flex items-center">
-        <!-- 
+        <section class="relative min-h-[85vh] w-full flex items-center">
+            <!-- 
             Position: Off-center (ml-[40vw])
             Function: Direct Purchase
             Style: Invisible Action
         -->
-        <div class="ml-[40vw]">
-            <a href="#" class="text-xs text-neutral-400 cursor-default">
-                {t.state08.title}
-            </a>
-        </div>
-    </section>
-
-</main>
+            <div class="ml-[40vw]">
+                <a
+                    href={t.state08.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-neutral-400 hover:text-neutral-300 transition-colors cursor-pointer"
+                >
+                    {t.state08.title}
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer class="w-full py-24 flex justify-center items-center">
         <span class="font-mono text-[10px] text-neutral-800 tracking-normal">
@@ -167,6 +184,7 @@ const t = translations[lang];
     </footer>
 
     <script>
-        document.getElementById('legal-year').textContent = new Date().getFullYear();
+        document.getElementById("legal-year").textContent =
+            new Date().getFullYear();
     </script>
 </SystemLayout>
