@@ -1,54 +1,65 @@
 ---
-const { lang = 'en' } = Astro.props;
+import { translations } from "../i18n/translations";
+const { lang = "en" } = Astro.props;
+const t = translations[lang as keyof typeof translations];
 ---
 
 <!doctype html>
 <html lang={lang} class="h-full w-full bg-black text-white">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/favicon-lightmode.svg?v=2" media="(prefers-color-scheme: light)">
-		<link rel="icon" href="/favicon-darkmode.svg?v=2" media="(prefers-color-scheme: dark)">
-		<meta name="generator" content={Astro.generator} />
-		<title>System State</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="icon"
+            href="/favicon-lightmode.svg?v=2"
+            media="(prefers-color-scheme: light)"
+        />
+        <link
+            rel="icon"
+            href="/favicon-darkmode.svg?v=2"
+            media="(prefers-color-scheme: dark)"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>{t.meta.title}</title>
         <style is:global>
             /* Fundamental Reset */
-            html, body {
+            html,
+            body {
                 margin: 0;
                 padding: 0;
                 overscroll-behavior: none;
             }
-            
+
             /* Selection Style - Clinical/Terminal */
             ::selection {
-                background: #FFFFFF;
+                background: #ffffff;
                 color: #000000;
             }
         </style>
-	</head>
-	<body class="h-full w-full overflow-x-hidden antialiased bg-black">
-		<slot />
+    </head>
+    <body class="h-full w-full overflow-x-hidden antialiased bg-black">
+        <slot />
         <script>
-            import Lenis from 'lenis'
+            import Lenis from "lenis";
 
             // Enforce strict friction / no cinematic easing
             const lenis = new Lenis({
                 duration: 1.0, // Standard duration, but we might remove easing
                 easing: (t) => t, // Linear easing = immediate stop, no smooth out
-                orientation: 'vertical',
-                gestureOrientation: 'vertical',
+                orientation: "vertical",
+                gestureOrientation: "vertical",
                 smoothWheel: true,
                 wheelMultiplier: 0.8, // Increase friction (lower multiplier = slower/heavier)
                 touchMultiplier: 1.5,
-            })
+            });
 
             // Loop
-            function raf(time) {
-                lenis.raf(time)
-                requestAnimationFrame(raf)
+            function raf(time: number) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
             }
 
-            requestAnimationFrame(raf)
+            requestAnimationFrame(raf);
         </script>
-	</body>
+    </body>
 </html>

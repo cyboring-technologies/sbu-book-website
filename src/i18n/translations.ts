@@ -4,6 +4,9 @@ export const translations = {
             line1: "Format: Automated logic management.",
             line2: "Status: Active.",
         },
+        meta: {
+            title: "Micro-Multinational",
+        },
         state02: {
             line1: "Execution is no longer scarce.",
             line2: "Coordination is.",
@@ -62,6 +65,9 @@ export const translations = {
         state01: {
             line1: "Formato: gestión lógica automatizada.",
             line2: "Estado: Activo.",
+        },
+        meta: {
+            title: "Micro-Multinacional",
         },
         state02: {
             line1: "La ejecución ya no es escasa.",

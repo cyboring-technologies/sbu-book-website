@@ -167,7 +167,7 @@ const t = translations[lang];
             <div class="ml-[40vw]">
                 <a
                     href={t.state08.url}
-                    class="text-xs text-neutral-400 hover:text-neutral-300 transition-colors cursor-pointer"
+                    class="text-xs text-neutral-400 cursor-default"
                 >
                     {t.state08.title}
                 </a>
@@ -182,7 +182,9 @@ const t = translations[lang];
     </footer>
 
     <script>
-        document.getElementById("legal-year").textContent =
-            new Date().getFullYear();
+        const legalYear = document.getElementById("legal-year");
+        if (legalYear) {
+            legalYear.textContent = new Date().getFullYear().toString();
+        }
     </script>
 </SystemLayout>
